@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+
+<!--
+	Project: FlyFrogger
+
+	Group: Justin Little, Nick Jones, Reuel Jacques-Sorrell 
+	
+	Description: 
+		The "game.html" file implements the animation of FlyFrogger after the user presses the "Start" button in the "index.html" file that is a link to the animation.
+
+	Imports: 
+		<body background> is implemented to import the "background.png" image as the background image.
+
+		"stylesheet.css" is the .css file that will format both the "index.html" and "game.html files"
+
+		Two fonts are imported from Google - Raleway and Work Sans - that will be implemented in the .css file.
+
+
+
+	Multiple divs are created in this file that contain images for the animation.
+-->
+
+	<body background = "background.png" class="background">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500|Work+Sans:900" rel="stylesheet">
+
+<head>
+	<h1>FrogFly</h1>
+	<h2>An HTML/CSS Animation</h2>
+</head>
+
+<body>
+
+	<!--
+		The "Reset" button in this file by creating a div/button with a link just like the "Start" button in "index.html". This link will redirect to "index.html" for the user to restart the animation.
+	-->
+
+	<div class="wrapper2">
+		<button class="resetButton">
+			<a href="index.html">Reset</a>
+		</button>
+	</div>
+
+	<!--
+		The "frog_tongue" div/image is created to appear when the frog gets within vicinity of a fly, and to disappear when the frog is NOT near a fly.
+
+		The "frog_image" div/image is created to appear when the frog is NOT near a fly, and to disappear when the frog is near a fly.
+	-->
+
+	<div class="frog_tongue">
+		<img src="frog.png" alt="frog" class="frog-image">
+	</div>
+
+	<div class="frog">
+		<img src="frog2.png" alt="frog2" class="frog-image-2">
+	</div>
+	
+	<!--
+		Four fly div/images are created to appear from the right of the screen to move to the left across the screen at various set hieghts in the stylesheet.
+
+		The <div class="fly flyX" is declared to format the entire fly {} class of flies, and to refer to each individual fly by formating each flyX{} in the stylesheet.
+	-->
+
+	<div class="fly fly1">
+		<img src="fly.png" alt="fly" class="fly-image-1">
+	</div>
+
+	<div class="fly fly2">
+		<img src="fly.png" alt="fly2" class="fly-image-2">
+	</div>
+
+	<div class="fly fly3">
+		<img src="fly.png" alt="fly3" class="fly-image-3">
+	</div>
+
+	<div class="fly fly4">
+		<img src="fly.png" alt="fly4" class="fly-image-4">
+	</div>
+</body>
+
+</html>

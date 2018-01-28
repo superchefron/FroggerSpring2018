@@ -1,5 +1,22 @@
+
 <!DOCTYPE html>
 <html>
+
+<!--
+	Project: FlyFrogger
+
+	Group: Justin Little, Nick Jones, Reuel Jacques-Sorrell
+
+   	Description: 
+	   	FlyFrogger is an animation implemented by HTML and CSS. The "index.html" file implements a div/button titled "Start" with a link that loads a seperate file "game.html" when clicked.
+
+	Imports:
+		<body background> is implemented to import the "background.png" image as the background image.
+
+		"stylesheet.css" is the .css file that will format both the "index.html" and "game.html files"
+
+		Two fonts are imported from Google - Raleway and Work Sans - that will be implemented in the .css file.
+-->
 
 	<body background = "background.png" class="background">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -7,38 +24,15 @@
 
 <head>
 	<h1>FrogFly</h1>
-	<h2>Eat as many flies as you can in 1 minute!</h2>
+	<h2>An HTML/CSS Animation</h2>
 </head>
 
-
 <body>
-	
-
-	<div class="frog">
-		<img src="frog.png" alt="frog" class="frog-image">
-	</div>
-
-	<div class="fly fly1">
-		<img src="fly.png" alt="fly" class="fly-image-1">
-	</div>
-
-	<div class="fly fly2">
-		<img src="fly.png" alt="fly2" class="fly-image-2">
-	</div>
-
-	<div class="fly fly3">
-		<img src="fly.png" alt="fly3" class="fly-image-3">
-	</div>
-
-	<div class="fly fly4">
-		<img src="fly.png" alt="fly4" class="fly-image-4">
-	</div>
-
-
 	<div class="wrapper">
-		<button class="startButton">Start Game!</button>
+		<button class="startButton">
+			<a href="game.html">Start!</a>
+		</button>
 	</div>
-
 </body>
 
 </html>
