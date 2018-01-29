@@ -12,90 +12,90 @@
 
 /* Formatting the heading "FlyFrogger" */
 h1 {
+	margin-top: 0;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 60pt;
-	margin-top: 0;
 }
 
 /* Formatting the sub-heading "An HTML/CSS Animation" */
 h2 {
-	font-family: 'Raleway', sans-serif;
 	margin-top: 89px;
 	margin-left: 50px;
+	font-family: 'Raleway', sans-serif;
 }
 
 /* 
 	Formats the positioning of both the heading & sub-heading to absolute postion
 	so that the exact margins can be declared in the upper, left-hand corner
 */
-h1, h2 {
+h1, 
+h2 {
 	position: absolute;
 }
 
 /* This wrapper div class is created to align the Start button in the center */
 .wrapper {
-	text-align: center;
 	margin-right: 300px;
+	text-align: center;
 }
 
 /* Formats the start button */
-.startButton {
-    background-color: white;
-    opacity: 0.5; /* medium transparency */
-    color: black;
-    border: 2px solid #e7e7e7;
-    position: absolute;
+.start-button {
+	position: absolute;
 	bottom: 50%; /* middle of the screen top/bottom */
+	font-family: "Raleway", sans-serif;
+    color: black;
     font-size: 100px;
-    cursor: pointer; 
-    font-family: "Raleway", sans-serif;
+    background-color: white;
+    border: 2px solid #e7e7e7;
     border-radius: 8px;
+    cursor: pointer; 
     /* Refers to the hover/visited animation actiions, 
     	which changes the box shading and opacity which takes 0.4 seconds. */
+    opacity: 0.5; /* medium transparency */
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
 }
 
 /* The wrapper2 div/class created to format the positioning of the Reset 
 	button on the screen */
-.wrapper2 {
-	text-align: center;
-}
+.wrapper2 { text-align: center;}
 
 /* Formats the Restart button the same as the Start button with different positioning */
-.resetButton {
+.reset-button {
+	position: absolute;
+	right: 10px;
+	font-family: "Raleway", sans-serif;
+	color: black;
+	font-size: 50px;
     background-color: white;
-    right: 10px;
-    opacity: 0.5;
-    color: black;
     border: 2px solid #e7e7e7;
-    position: absolute;
-    font-size: 50px;
-    cursor: pointer;
-    font-family: "Raleway", sans-serif;
     border-radius: 8px;
+    opacity: 0.5;
+    cursor: pointer;
     transition-duration: 0.4s;
 }
 
 /* Formats the reset & start buttons when the mouse hovers over the button */
-.startButton:hover, .resetButton:hover {
+.start-button:hover, 
+.reset-button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     opacity: 0.75;
-    }
+}
 
 /* Formats the link on the button to appear black instead of blue or purple */
 a, a:visited {
-	text-decoration: none;
 	color: black;
+	text-decoration: none;
 }
 
 
 /* Formats the appearance and positioning of the tongue, refers to "tongue.png" */
 .tongue {
 	position: absolute;
-	opacity: 0;
 	bottom: 0px;
 	left: 230px;
+	opacity: 0;
 	-webkit-animation: lick 60s infinite  normal;
 	animation-delay: 4s;
 	animation-iteration-count: 1;
@@ -119,40 +119,40 @@ The following formats the individual flies that appear on the screen from
  */
 
 .fly1 {
-	opacity: 0;
 	position: absolute;
 	bottom: 100px;
 	right: 0px;
+	opacity: 0;
 	-webkit-animation: moveFly 6s infinite  normal ease-out;
 	animation-delay: 6s;
 	animation-iteration-count: 4;	
 }
 
 .fly2 {
-	opacity: 0;
 	position: absolute;
 	bottom: 250px;
 	right: 0px;
+	opacity: 0;
 	-webkit-animation: moveFly 4s infinite  normal ease-out;
 	animation-delay: 4s;
 	animation-iteration-count: 6; 
 }
 
 .fly3 {
-	opacity: 0;
 	position: absolute;
 	bottom: 400px;
 	right: 0px;
+	opacity: 0;
 	-webkit-animation: moveFly 5s infinite  normal ease-out;
 	animation-delay: 5s;
 	animation-iteration-count: 5;
 }
 
 .fly4 {
-	opacity: 0;
 	position: absolute;
 	bottom: 550px;
 	right: 0px;
+	opacity: 0;
 	-webkit-animation: moveFly 4s infinite normal ease-out;
 	animation-delay: 2s;
 	animation-iteration-count: 7;
