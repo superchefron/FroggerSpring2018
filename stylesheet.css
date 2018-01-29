@@ -51,9 +51,9 @@ h2 {
     border-radius: 8px;
     cursor: pointer; 
     /* Refers to the hover/visited animation actiions, 
-    	which changes the box shading and opacity which takes 0.4 seconds. */
+    	which changes the box shading and opacity which
+    	takes 0.4 seconds. */
     opacity: 0.5; /* medium transparency */
-    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
 }
 
