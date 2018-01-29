@@ -65,8 +65,7 @@ h1, h2 {
 /* Formats the Restart button the same as the Start button with different positioning */
 .resetButton {
     background-color: white;
-    position: absolute;
-    margin-left: 675px;
+    right: 10px;
     opacity: 0.5;
     color: black;
     border: 2px solid #e7e7e7;
@@ -75,7 +74,6 @@ h1, h2 {
     cursor: pointer;
     font-family: "Raleway", sans-serif;
     border-radius: 8px;
-    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 
@@ -91,18 +89,19 @@ a, a:visited {
 	color: black;
 }
 
-/* Formats the image of the frog with tongue, refers to "frog.png" */
-.frog_tongue {
+
+/* Formats the appearance and positioning of the tongue, refers to "tongue.png" */
+.tongue {
 	position: absolute;
 	opacity: 0;
 	bottom: 0px;
-	left: 200px;
+	left: 230px;
 	-webkit-animation: lick 60s infinite  normal;
 	animation-delay: 4s;
 	animation-iteration-count: 1;
 }
 
-/* Formats the image of the frog without the tongue, refers to "frog_2.png" */
+/* Formats the image of the frog without the tongue, refers to "frog.png" */
 .frog {
 	position: absolute;
 	bottom: 0px;
@@ -160,7 +159,7 @@ The following formats the individual flies that appear on the screen from
 }
 
 /* 
-	> The following is a function called "moveFly" that creates the fly's animation.
+	> The following is a keyframe called "moveFly" that creates the fly's animation.
 	> The percentages on the left-hand side represent the time throughout each interval
 		of the animation.
 	> "right: 0-100%" shows the position of the flies accross the screen from right to left.
@@ -184,16 +183,13 @@ The following formats the individual flies that appear on the screen from
 }
 
 /*
-	> The following is a function called "moveFrog" which directs the animation for the 
-		"frog" image to move to the fly & disappear once the frog meets the fly, allowing 
-		ONLY the "frog_tongue" image to be present. This effect will create the effect
+	> The following is a keyframe called "moveFrog" which directs the animation for the 
+		"frog" image to move to the fly. This effect will create the effect
 		that the frog is catching the fly. The seperate animation titled "lick" is below
 		"moveFrog"
 	> The percentages throughout the animation interval are set based on what timeframe 
 		throughout the 60 second animation the fly reaches the frogs vicinity (70% of the 
 		screen from the right margin).
-	> The opacity is set to 100 to begin with, and is adjusted to 0 at 0.1s before and
-		after the frog reaches the fly.
 	> The positioning (Ex. bottom: 460px) is adjusted every time a new fly crosses the 
 		frog's threshold. The positions are exactly the same as the fly's (set from the 
 		bottom margin) so that the frog meets the fly at the exact position.
@@ -201,129 +197,39 @@ The following formats the individual flies that appear on the screen from
 
 @-webkit-keyframes moveFrog {
 	0% { bottom: 0px;}
-
-	1.48% { opacity: 100; }
-	1.49% { opacity: 0; }
 	1.5% { bottom: 460px;}
-	1.51% { opacity: 100; }
-
-	4.8% { opacity: 100; }
-	4.9% { opacity: 0; }
 	5% { bottom: 120px; }
-	5.1% { opacity: 100; }
-
-	6.8% { opacity: 100; }
-	6.9% { opacity: 0; }
 	7% { bottom: 300px; }
-	7.1% { opacity: 100; }
-
-	7.8% { opacity: 100; }
-	7.9% { opacity: 0; }
 	8% { bottom: 460px;}
-	8.1% { opacity: 100; }
-
-	9.3% { opacity: 100; }
-	9.4% { opacity: 0; }
 	9.5% { bottom: 0px; }
-	9.6% { opacity: 100; }
-	
-	10.8% { opacity: 100; }
-	10.9% { opacity: 0; }
 	11% { bottom: 120px; }
-	11.1% { opacity: 100; }
-
-	13.8% { opacity: 100; }
-	13.9% { opacity: 0; }
 	14% { bottom: 460px; }
-	14.1% { opacity: 100; }
-
-	15.3% { opacity: 100; }
-	15.4% { opacity: 0; }
 	15.5% { bottom: 300px; }
-	15.6% { opacity: 100; }
-
-	17.8% { opacity: 100; }
-	17.9% { opacity: 0; }
 	18% { bottom: 120px; }
-	18.1% { opacity: 100; }
-
-	19.8% { opacity: 100; }
-	19.9% { opacity: 0; }
 	20% { bottom: 0px; }
-	20.1% {opacity: 100;}
-
-	21.3% { opacity: 100; }
-	21.4% { opacity: 0; }
 	21.5% { bottom: 460px; }
-	21.6% { opacity: 100; }
-
-	23.3% { opacity: 100; }
-	23.4% { opacity: 0; }
 	23.5% { bottom:300px; }
-	23.6% { opacity: 100; }
-
-	24.8% { opacity: 100; }
-	24.9% { opacity: 0; }
 	25% { bottom:120px; }
-	25.1% { opacity: 100; }
-
-	27.3% { opacity: 100; }
-	27.4% { opacity: 0; }
 	27.5% { bottom:460px; }
-	27.6% { opacity: 100; }
-
-	29.8% { opacity: 100; }
-	29.9% { opacity: 0; }
 	30% { bottom:0px; }
-	30.1% { opacity: 100; }
-
-	31.3% { opacity: 100; }
-	31.4% { opacity: 0; }
 	31.5% { bottom: 120px; }
-	31.6% { opacity: 100; }
-
-	32.8% { opacity: 100; }
-	32.9% { opacity: 0; }
 	33% { bottom: 300px; }
-	33.1% { opacity: 100; }
-
-	34.8% { opacity: 100; }
-	34.9% { opacity: 0; }
 	35% { bottom: 460px; }
-	35.1% { opacity: 100; }
-
-	37.8% { opacity: 100; }
-	37.9% { opacity: 0; }
 	38% { bottom: 120px; }
-	38.1% { opacity: 100; }
-
-	39.8% { opacity: 100; }
-	39.9% { opacity: 0; }
 	40% { bottom: 0px; }
-	40.1% { opacity: 100; }
-
-	40.8% { opacity: 100; }
-	40.9% { opacity: 0; }
 	41% { bottom: 300px; }
-	41.1% { opacity: 100; }
-
-	41.8% { opacity: 100; }
-	41.9% { opacity: 0; }
-	42% { bottom: 460px; }
-	42.1% { opacity: 100; }
-
+	41.5% { bottom: 460px; }
 	45% { bottom: 0px; }
-
 	100% { bottom: 0px; }
 }
 
 /*
-	> The following is a function called "lick" which directs the animation for the
-		"frog_tongue" image to move the the fly & appear at the time the frog meets the fly
-	> The opacity is set to 0 to begin with, and is adjusted to 100 at 0.1s before and
-		after the frog reaches the fly.
+	> The following is a keyframe called "lick" which directs the animation for the
+		"tongue" image to move with the frog & appear at the time the frog meets the fly
+	> The opacity is set to 0 to begin with, and is adjusted to 100 at 0.1s before and 
+		disappear 0.1s after the frog reaches the fly.
 	> The positioning (Ex. "bottom: 460px") is adjusted to mimick the keyframe "moveFrog"
-		so that the "frog_tongue" image follows the normal "frog" image.
+		so that the "tongue" image follows the normal "frog" image.
 */
 
 @-webkit-keyframes lick {
@@ -434,16 +340,12 @@ The following formats the individual flies that appear on the screen from
 	41% { bottom: 300px; }
 	41.1% { opacity: 0; }
 
-	41.8% { opacity: 0; }
-	41.9% { opacity: 100; }
-	42% { bottom: 460px; }
-	42.1% { opacity: 0; }
+	41.3% { opacity: 0; }
+	41.4% { opacity: 100; }
+	41.5% { bottom: 460px; }
+	41.6% { opacity: 0; }
 
 	45% { bottom: 0px; }
 
 	100% { bottom: 0px; }
 }
-
-
-
-
